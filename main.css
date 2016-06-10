@@ -1,56 +1,83 @@
-body {
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     font-family: 'Raleway', sans-serif;
 }
 
-.header {
-    height: 100vh;
-    background-color: #A9155D;
-}
-
 .navigation {
-    width: 60%;
-    align-content: center;
-    margin: auto;
-    padding: 15px;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 999;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .navigation ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    text-align: right;
     display: flex;
+    justify-content: flex-end;
+    background-color: #AA155D;
 }
 
-.navigation li {
-    text-align: center;
-    flex: 1;
+.navigation ul li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 35px;
+}
+
+.navigation ul li:nth-child(1) {
+    padding-right: 28%;
+    padding-left: 10;
+    padding-top: 0;
+    margin: 0;
 }
 
 .navigation ul li a {
     text-decoration: none;
     color: #FFFFFF;
-    text-transform: uppercase;
-    font-size: 1em;
-    width: 150px;
     padding-bottom: 5px;
 }
 
+.navigation ul li img {
+    width: 650px;
+    height: 100px;
+}
+
 .navigation ul li a:hover {
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 4px solid #;
 }
 
-.header h1 {
-    height: 200px;
-    width: 50%;
-    margin-top: 15%;
-    margin-left: 25%;
-}
-
-.header h1 img {
-    height: 100%;
+.firm-info {
     width: 100%;
+    line-height: 1.1em;
+    height: 1.7em;
+    background-color: #A9155D;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.firm-info {
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h5 {
+    padding: 20px 0;
+}
+
+.js-below {
+    background: #222;
+    color: #FFFFFF;
 }
 
 .Line {
@@ -61,125 +88,111 @@ body {
   height: 3px;
 }
 
-.main {
-    width: 60%;
+section {
+    width: 80%;
     margin: auto;
-}
-
-.main h1 {
     text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 5px;
+    padding-top: 110px;
 }
 
-.main p {
-    font-size: 1.2em;
-    line-height: 1.4em;
-    text-align: justify;
+/** Button do sklepu **/
+
+.button {
+    display: inline-block;
+    background: #AA155D;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 10px 0px #AA155D;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
 }
 
-.about-me h3 {
-    text-align: center;
+.button:hover {
+    box-shadow: 0px 17px 20px 0px #AA155D;
 }
 
-.people h3 {
-    margin-left: 15px;
-    text-align: center;
+/** Formularz **/
+form {
+    max-width: 500px;
+    margin: 0 auto 40px;
 }
 
-.people img {
-    margin-left: 40px;
-    border-radius: 100%;
-    float: left;
-    height: 200px;
-    width: 200px;
-}
-
-.people p {
-    padding-left: 280px;
-    color: dimgrey;
-    font-style: italic;
-}
-
-.people-second h3 {
-    margin-right: 15px;
-    text-align: center;
-}
-
-.people-second img {
-    margin-right: 40px;
-    border-radius: 100%;
-    float: right;
-    height: 200px;
-    width: 200px;
-}
-
-.people-second p {
-    padding-right: 280px;
-    color: dimgrey;
-    font-style: italic;
-}
-
-.offer {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.offer h3 {
-    text-align: center;
-}
-
-.offer img {
-    height: 500px;
-    width: 700px;
+form label {
     display: block;
-    margin-left: -10%;
-    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.offer p {
-    font-size: 1.2em;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 50px;
+form label span {
+    display: block;
 }
 
-.news {
-    margin-top: 40px;
+form textarea {
+    height: 10em;
 }
 
-.news p {
-    text-align: center;
-    color: red;
-    font-style: italic bold;
+.submite-wrap {
+    text-align: right;
 }
+
+form [type="submit"] {
+    background-color: #AA155D;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    width: 33%;
+}
+
+form [type="submit"]:hover {
+    background-color: #E1C184;
+}
+
+form input, form textarea {
+    border: 1px solid #AA155D;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #E1C184;
+}
+
+.contact-form-info label {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.contact-form-info label:nth-child(1) {
+    padding-right: 5px;
+}
+
+.contact-form-info label:nth-child(2) {
+    padding-left: 5px;
+}
+
 .map {
     float: left;
     margin-left: 40px;
 }
 
-.contact {
-    margin-bottom: 60px;
+footer {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
 }
-.contact p {
+
+footer h1 {
+    text-align: center;
+}
+
+footer p {
     margin-top: 80px;
     padding-left: 600px;
     line-height: 2em;
 }
-.clear {
-    clear: both;
-}
 
-.footer {
-    width: 100%;
-    color: #FFFFFF;
-    background-color: #870747;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.footer p {
-    margin: 0;
-    padding: 0;
+.map {
+    padding-bottom: 60px;
 }
