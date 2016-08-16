@@ -679,4 +679,8 @@ form input:focus, form textarea:focus {
         cursor: pointer;
         margin: 5px auto;
     }
+    
+    .video img {
+        max-width: 1000px;
+    }
 }
